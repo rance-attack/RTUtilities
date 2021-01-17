@@ -1,6 +1,6 @@
 import UIKit
 
-final class ZoomableImageView: UIImageView {
+public final class ZoomableImageView: UIImageView {
     private var scale: CGFloat = 1
     private var pinchOffset: CGPoint = .zero
     private var panOffset: CGPoint = .zero
@@ -30,7 +30,7 @@ final class ZoomableImageView: UIImageView {
         addGestureRecognizer(panRecognizer)
     }
 
-    convenience init() {
+    public convenience init() {
         self.init(frame: .zero)
     }
 
@@ -125,7 +125,7 @@ final class ZoomableImageView: UIImageView {
 }
 
 extension ZoomableImageView: UIGestureRecognizerDelegate {
-    func gestureRecognizer(
+    public func gestureRecognizer(
         _ gestureRecognizer: UIGestureRecognizer,
         shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
 
